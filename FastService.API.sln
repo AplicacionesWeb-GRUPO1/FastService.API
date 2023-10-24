@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastService.API", "FastService.API\FastService.API.csproj", "{B209337F-FB97-4AFE-9A7D-890CC10ACE8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B209337F-FB97-4AFE-9A7D-890CC10ACE8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B209337F-FB97-4AFE-9A7D-890CC10ACE8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B209337F-FB97-4AFE-9A7D-890CC10ACE8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B209337F-FB97-4AFE-9A7D-890CC10ACE8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

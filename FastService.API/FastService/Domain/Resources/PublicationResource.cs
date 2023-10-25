@@ -1,0 +1,12 @@
+using LearningCenter.API.Learning.Domain.Models;
+
+namespace LearningCenter.API.Learning.Resources;
+
+public class PublicationResource
+{
+    public int Id { get; set; }
+    public string Address { get; set; }
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public ClientResource Client { get; set; }
+}

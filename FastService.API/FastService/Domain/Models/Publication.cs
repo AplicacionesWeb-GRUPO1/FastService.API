@@ -12,5 +12,5 @@ public class Publication
     // Relationships
     public int ClientId { get; set; }
     public Client Client { get; set; }
-    
+    public IList<Contract> Contracts { get; set; } = new List<Contract>();
 }

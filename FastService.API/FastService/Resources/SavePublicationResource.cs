@@ -25,5 +25,5 @@ public class SavePublicationResource
 
     [Required]
     [MaxLength(120)]
-    public string image { get; set; }
+    public string Image { get; set; }
 }

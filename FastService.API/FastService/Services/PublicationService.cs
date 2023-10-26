@@ -80,7 +80,7 @@ public class PublicationService : IPublicationService
         var existingClient = await _clientRepository.FindByIdAsync(publication.ClientId);
 
         if (existingClient == null)
-            return new PublicationResponse("Invalid Category");
+            return new PublicationResponse("Invalid Client");
         
         // Validate Title
 

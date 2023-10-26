@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace FastService.API.FastService.Shared.Extensions;
+namespace FastService.API.Shared.Extensions;
 
 public static class ModelStateExtensions
 {

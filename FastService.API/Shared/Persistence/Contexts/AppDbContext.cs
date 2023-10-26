@@ -1,8 +1,8 @@
-using FastService.API.FastService.Shared.Extensions;
-using LearningCenter.API.Learning.Domain.Models;
+using FastService.API.Shared.Extensions;
+using FastService.API.FastService.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace FastService.API.FastService.Shared.Persistence.Contexts;
+namespace FastService.API.Shared.Persistence.Contexts;
 
 public class AppDbContext : DbContext
 {

@@ -1,4 +1,4 @@
-namespace FastService.API.FastService.Shared.Domain.Services.Communication;
+namespace FastService.API.Shared.Domain.Services.Communication;
 
 public abstract class BaseResponse<T>
 {

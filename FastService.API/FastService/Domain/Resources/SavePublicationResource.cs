@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace LearningCenter.API.Learning.Resources;
+namespace FastService.API.FastService.Resources;
 
 public class SavePublicationResource
 {

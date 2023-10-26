@@ -1,6 +1,6 @@
-using FastService.API.FastService.Shared.Persistence.Contexts;
+using FastService.API.Shared.Persistence.Contexts;
 
-namespace FastService.API.FastService.Shared.Persistence.Repositories;
+namespace FastService.API.Shared.Persistence.Repositories;
 
 public class BaseRepository
 {

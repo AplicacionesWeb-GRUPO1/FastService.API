@@ -1,6 +1,6 @@
-using LearningCenter.API.Learning.Domain.Models;
+using FastService.API.FastService.Domain.Models;
 
-namespace LearningCenter.API.Learning.Resources;
+namespace FastService.API.FastService.Resources;
 
 public class PublicationResource
 {

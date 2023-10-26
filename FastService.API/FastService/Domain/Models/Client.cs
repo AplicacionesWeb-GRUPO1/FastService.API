@@ -1,4 +1,4 @@
-namespace LearningCenter.API.Learning.Domain.Models;
+namespace FastService.API.FastService.Domain.Models;
 
 public class Client
 {
@@ -12,4 +12,5 @@ public class Client
     // Relationships
     
     public IList<Publication> Publications { get; set; } = new List<Publication>();
+  
 }

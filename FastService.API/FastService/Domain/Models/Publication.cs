@@ -1,4 +1,4 @@
-namespace LearningCenter.API.Learning.Domain.Models;
+namespace FastService.API.FastService.Domain.Models;
 
 public class Publication
 {

@@ -1,7 +1,7 @@
-using FastService.API.FastService.Shared.Persistence.Contexts;
-using LearningCenter.API.Learning.Domain.Repositories;
+using FastService.API.Shared.Persistence.Contexts;
+using FastService.API.FastService.Domain.Repositories;
 
-namespace FastService.API.FastService.Shared.Persistence.Repositories;
+namespace FastService.API.Shared.Persistence.Repositories;
 
 public class UnitOfWork : IUnitOfWork
 {

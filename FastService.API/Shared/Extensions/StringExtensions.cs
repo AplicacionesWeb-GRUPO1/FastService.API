@@ -1,4 +1,4 @@
-namespace FastService.API.FastService.Shared.Extensions;
+namespace FastService.API.Shared.Extensions;
 
 public static class StringExtensions
 {

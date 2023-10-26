@@ -1,4 +1,4 @@
-namespace LearningCenter.API.Learning.Domain.Repositories;
+namespace FastService.API.FastService.Domain.Repositories;
 
 public interface IUnitOfWork
 {

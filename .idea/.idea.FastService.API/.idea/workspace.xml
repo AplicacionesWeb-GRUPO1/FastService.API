@@ -9,7 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7010f8af-6284-481d-975b-a9dcdc620de3" name="Changes" comment="" />
+    <list default="true" id="7010f8af-6284-481d-975b-a9dcdc620de3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Domain/Repositories/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Domain/Repositories/IUnitOfWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +36,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/persistence",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -108,6 +112,7 @@
       <workItem from="1698271096274" duration="3863000" />
       <workItem from="1698278418496" duration="1552000" />
       <workItem from="1698280012863" duration="350000" />
+      <workItem from="1698280377301" duration="1692000" />
     </task>
     <servers />
   </component>

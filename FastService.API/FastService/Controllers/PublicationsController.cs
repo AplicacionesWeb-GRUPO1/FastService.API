@@ -5,7 +5,7 @@ using FastService.API.Learning.Resources;
 using FastService.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FastService.API.Learning.Controllers;
+namespace FastService.API.FastService.Controllers;
 
 [ApiController]
 [Route("/api/v1/[controller]")]
@@ -70,7 +70,7 @@ public class PublicationsController : ControllerBase
     public async Task<IActionResult> DeleteAsync(int id)
     {
         var result = await _tutorialService.DeleteAsync(id);
-        
+
         if (!result.Success)
             return BadRequest(result.Message);
 

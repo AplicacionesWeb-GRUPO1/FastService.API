@@ -10,5 +10,7 @@ public class ModelToResourceProfile : Profile
     {
         CreateMap<Client, ClientResource>();
         CreateMap<Publication, PublicationResource>();
+        CreateMap<Expert, ExpertResource>();
+        CreateMap<Contract, ContractResource>();
     }
 }

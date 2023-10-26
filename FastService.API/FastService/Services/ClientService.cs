@@ -35,14 +35,18 @@ public class ClientService : IClientService
         }
     }
 
-    public async Task<ClientResponse> UpdateAsync(int id, Client category)
+    public async Task<ClientResponse> UpdateAsync(int id, Client client)
     {
         var existingCategory = await _clientRepository.FindByIdAsync(id);
 
         if (existingCategory == null)
             return new ClientResponse("Client not found.");
 
-        existingCategory.Name = category.Name;
+        existingCategory.Name = client.Name;
+        existingCategory.LastName = client.LastName;
+        existingCategory.Phone = client.Phone;
+        existingCategory.BirthdayDate = client.BirthdayDate;
+        existingCategory.Money = client.Money;
 
         try
         {

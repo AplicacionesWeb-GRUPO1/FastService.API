@@ -9,5 +9,6 @@ public class PublicationResource
     public string Title { get; set; }
     public string Description { get; set; }
     public bool IsPublished { get; set; }
+    public string Image { get; set; }
     public ClientResource Client { get; set; }
 }

@@ -27,6 +27,8 @@ public class AppDbContext : DbContext
         builder.Entity<Client>().Property(p => p.Phone).IsRequired().HasMaxLength(15);
         builder.Entity<Client>().Property(p => p.BirthdayDate).IsRequired().HasMaxLength(10);
         builder.Entity<Client>().Property(p => p.Money).IsRequired().HasMaxLength(13);
+        builder.Entity<Client>().Property(p => p.Avatar).IsRequired().HasMaxLength(100);
+        builder.Entity<Client>().Property(p => p.Role).IsRequired().HasMaxLength(10);
 
         // Relationships
         builder.Entity<Client>()
@@ -39,9 +41,10 @@ public class AppDbContext : DbContext
         builder.Entity<Publication>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Publication>().Property(p => p.Address).IsRequired().HasMaxLength(50);
         builder.Entity<Publication>().Property(p => p.Title).IsRequired().HasMaxLength(50);
-        builder.Entity<Publication>().Property(p => p.Description).HasMaxLength(120);
-        // isPublished is set to true by default
+        builder.Entity<Publication>().Property(p => p.Description).HasMaxLength(300);
         builder.Entity<Publication>().Property(p => p.IsPublished).IsRequired().HasDefaultValue(true);
+        builder.Entity<Publication>().Property(p => p.Image).IsRequired().HasMaxLength(100);
+        
         // Apply Snake Case Naming Convention
 
         builder.UseSnakeCaseNamingConvention();

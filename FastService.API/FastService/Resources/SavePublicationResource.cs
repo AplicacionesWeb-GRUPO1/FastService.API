@@ -13,7 +13,7 @@ public class SavePublicationResource
     public string Title { get; set; }
 
     [Required]
-    [MaxLength(120)]
+    [MaxLength(300)]
     public string Description { get; set; }
 
 
@@ -22,4 +22,8 @@ public class SavePublicationResource
 
     [Required]
     public int ClientId { get; set; }
+
+    [Required]
+    [MaxLength(120)]
+    public string image { get; set; }
 }

@@ -33,8 +33,19 @@ public class PublicationsController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SavePublicationResource resource)
     {
-        var publications = await _publicationService.ListAsync();
-        return Ok();
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState.GetErrorMessages());
+        
+        var publication =  _mapper.Map<SavePublicationResource,Publication>(resource);
+
+        var result = await _publicationService.SaveAsync(publication);
+
+        if (!result.Success)
+            return BadRequest(result.Message);
+
+        var publicationResource = _mapper.Map<Publication, PublicationResource>(result.Resource);
+
+        return Ok(publicationResource);
     }
 
     [HttpPut("{id}")]

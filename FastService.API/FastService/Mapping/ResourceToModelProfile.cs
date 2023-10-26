@@ -2,7 +2,7 @@ using AutoMapper;
 using FastService.API.FastService.Domain.Models;
 using FastService.API.FastService.Resources;
 
-namespace FastService.API.Learning.Mapping;
+namespace FastService.API.FastService.Mapping;
 
 public class ResourceToModelProfile : Profile
 {

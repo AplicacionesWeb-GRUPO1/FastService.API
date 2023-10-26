@@ -28,7 +28,6 @@ public class PublicationRepository : BaseRepository, IPublicationRepository
         return await _context.Publications
             .Include(p => p.Client)
             .FirstOrDefaultAsync(p => p.Id == publicationId);
-        
     }
 
     public async Task<Publication> FindByTitleAsync(string title)

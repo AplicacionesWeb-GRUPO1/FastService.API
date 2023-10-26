@@ -5,7 +5,7 @@ using FastService.API.FastService.Resources;
 using FastService.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LearningCenter.API.Learning.Controllers;
+namespace FastService.API.FastService.Controllers;
 
 [ApiController]
 [Route("/api/v1/[controller]")]
@@ -33,19 +33,8 @@ public class PublicationsController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SavePublicationResource resource)
     {
-        if (!ModelState.IsValid)
-            return BadRequest(ModelState.GetErrorMessages());
-
-        var publication = _mapper.Map<SavePublicationResource, Publication>(resource);
-
-        var result = await _publicationService.SaveAsync(publication);
-
-        if (!result.Success)
-            return BadRequest(result.Message);
-
-        var publicationResource = _mapper.Map<Publication, PublicationResource>(result.Resource);
-
-        return Ok(publicationResource);
+        var publications = await _publicationService.ListAsync();
+        return Ok();
     }
 
     [HttpPut("{id}")]

@@ -30,6 +30,10 @@ builder.Services.AddRouting(options => options.LowercaseUrls = true);
 // Dependency Injection Configuration
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IClientService, ClientService>();
+
+builder.Services.AddScoped<IPublicationRepository, PublicationRepository>();
+builder.Services.AddScoped<IPublicationService, PublicationService>();
+
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // AutoMapper Configuration

@@ -9,7 +9,7 @@ public class Expert
     public string Phone { get; set; }
     public string BirthdayDate { get; set; }
     public decimal Money { get; set; }
-    public int Rating { get; set; }
+    public decimal Rating { get; set; }
     public string Avatar { get; set; }
     public string Role { get; set; }
     // Relationships

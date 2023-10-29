@@ -10,7 +10,7 @@ public class Contract
     public string State { get; set; }
 
     // Relationships
-    public Client ClientPost { get; set; }
-    public Expert Experts { get; set; }
+    public Publication Publication { get; set; }
+    public Expert Expert { get; set; }
 
 }

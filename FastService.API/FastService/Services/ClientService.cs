@@ -63,17 +63,17 @@ public class ClientService : IClientService
 
     public async Task<ClientResponse> DeleteAsync(int id)
     {
-        var existingCategory = await _clientRepository.FindByIdAsync(id);
+        var existingClient = await _clientRepository.FindByIdAsync(id);
 
-        if (existingCategory == null)
+        if (existingClient == null)
             return new ClientResponse("Client not found.");
 
         try
         {
-            _clientRepository.Remove(existingCategory);
+            _clientRepository.Remove(existingClient);
             await _unitOfWork.CompleteAsync();
 
-            return new ClientResponse(existingCategory);
+            return new ClientResponse(existingClient);
         }
         catch (Exception e)
         {

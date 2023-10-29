@@ -9,6 +9,9 @@ public class AppDbContext : DbContext
 
     public DbSet<Client> Clients { get; set; }
     public DbSet<Publication> Publications { get; set; }
+    
+    public DbSet<Expert> Experts { get; set; }
+    public DbSet<Contract> Contracts { get; set; }
 
     public AppDbContext(DbContextOptions options) : base(options)
     {
@@ -44,7 +47,40 @@ public class AppDbContext : DbContext
         builder.Entity<Publication>().Property(p => p.Description).HasMaxLength(300);
         builder.Entity<Publication>().Property(p => p.IsPublished).IsRequired().HasDefaultValue(true);
         builder.Entity<Publication>().Property(p => p.Image).IsRequired().HasMaxLength(100);
-        
+
+
+        // Relationships
+        builder.Entity<Publication>()
+            .HasMany(p => p.Contracts)
+            .WithOne(p => p.Publication)
+            .HasForeignKey(p => p.PublicationId);
+
+
+        builder.Entity<Expert>().ToTable("Experts");
+        builder.Entity<Expert>().HasKey(p => p.Id);
+        builder.Entity<Expert>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Expert>().Property(p => p.Name).IsRequired().HasMaxLength(30);
+        builder.Entity<Expert>().Property(p => p.LastName).IsRequired().HasMaxLength(50);
+        builder.Entity<Expert>().Property(p => p.Phone).IsRequired().HasMaxLength(15);
+        builder.Entity<Expert>().Property(p => p.BirthdayDate).IsRequired().HasMaxLength(10);
+        builder.Entity<Expert>().Property(p => p.Money).IsRequired().HasMaxLength(13);
+        builder.Entity<Expert>().Property( p => p.Rating).IsRequired().HasMaxLength(5);
+        builder.Entity<Expert>().Property(p => p.Avatar).IsRequired().HasMaxLength(100);
+        builder.Entity<Expert>().Property(p => p.Role).IsRequired().HasMaxLength(10);
+        // Relationships
+        builder.Entity<Expert>()
+            .HasMany(p => p.Contracts)
+            .WithOne(p => p.Expert)
+            .HasForeignKey(p => p.ExpertId);
+
+        builder.Entity<Contract>().ToTable("Contracts");
+        builder.Entity<Contract>().HasKey(p => p.Id);
+        builder.Entity<Contract>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Contract>().Property(p => p.Price).IsRequired().HasMaxLength(10);
+
+
+
+
         // Apply Snake Case Naming Convention
 
         builder.UseSnakeCaseNamingConvention();

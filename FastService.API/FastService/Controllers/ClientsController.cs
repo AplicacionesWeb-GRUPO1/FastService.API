@@ -36,16 +36,16 @@ public class ClientsController : ControllerBase
         if (!ModelState.IsValid)
             return BadRequest(ModelState.GetErrorMessages());
 
-        var category = _mapper.Map<SaveClientResource, Client>(resource);
+        var client = _mapper.Map<SaveClientResource, Client>(resource);
 
-        var result = await _clientService.SaveAsync(category);
+        var result = await _clientService.SaveAsync(client);
 
         if (!result.Success)
             return BadRequest(result.Message);
 
-        var categoryResource = _mapper.Map<Client, ClientResource>(result.Resource);
+        var clientResource = _mapper.Map<Client, ClientResource>(result.Resource);
 
-        return Ok(categoryResource);
+        return Ok(clientResource);
     }
 
     [HttpPut("{id}")]
@@ -54,15 +54,15 @@ public class ClientsController : ControllerBase
         if (!ModelState.IsValid)
             return BadRequest(ModelState.GetErrorMessages());
         
-        var category = _mapper.Map<SaveClientResource, Client>(resource);
-        var result = await _clientService.UpdateAsync(id, category);
+        var client = _mapper.Map<SaveClientResource, Client>(resource);
+        var result = await _clientService.UpdateAsync(id, client);
         
         if (!result.Success)
             return BadRequest(result.Message);
 
-        var categoryResource = _mapper.Map<Client, ClientResource>(result.Resource);
+        var clientResource = _mapper.Map<Client, ClientResource>(result.Resource);
 
-        return Ok(categoryResource);
+        return Ok(clientResource);
     }
 
     [HttpDelete("{id}")]
@@ -73,9 +73,9 @@ public class ClientsController : ControllerBase
         if (!result.Success)
             return BadRequest(result.Message);
         
-        var categoryResource = _mapper.Map<Client, ClientResource>(result.Resource);
+        var clientResource = _mapper.Map<Client, ClientResource>(result.Resource);
 
-        return Ok(categoryResource);
+        return Ok(clientResource);
     }
     
 }

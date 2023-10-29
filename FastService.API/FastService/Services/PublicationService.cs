@@ -2,15 +2,15 @@
 using FastService.API.FastService.Domain.Repositories;
 using FastService.API.FastService.Domain.Services;
 using FastService.API.FastService.Domain.Services.Communication;
-using FastService.API.Shared.Persistence.Repositories;
 
 namespace FastService.API.FastService.Services;
 
 public class PublicationService : IPublicationService
 {
     private readonly IPublicationRepository _publicationRepository;
-    private readonly IUnitOfWork _unitOfWork;
     private readonly IClientRepository _clientRepository;
+
+    private readonly IUnitOfWork _unitOfWork;
 
     public PublicationService(IPublicationRepository publicationRepository, IUnitOfWork unitOfWork, IClientRepository clientRepository)
     {
@@ -31,14 +31,14 @@ public class PublicationService : IPublicationService
 
     public async Task<PublicationResponse> SaveAsync(Publication publication)
     {
-        // Validate CategoryId
+        // Validate Client Id
 
         var existingClient = await _clientRepository.FindByIdAsync(publication.ClientId);
 
         if (existingClient == null)
             return new PublicationResponse("Invalid Client");
         
-        // Validate Title
+        // Validate titulo
 
         var existingTutorialWithTitle = await _publicationRepository.FindByTitleAsync(publication.Title);
 

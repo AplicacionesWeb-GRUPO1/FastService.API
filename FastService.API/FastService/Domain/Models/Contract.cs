@@ -8,6 +8,7 @@ public class Contract
     public int ExpertId { get; set; }
     public int Price { get; set; }
     public string State { get; set; }
+    public string Date { get; set; }
 
     // Relationships
     public Publication Publication { get; set; }

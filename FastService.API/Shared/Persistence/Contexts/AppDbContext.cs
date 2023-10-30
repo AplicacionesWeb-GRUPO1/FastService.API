@@ -64,7 +64,7 @@ public class AppDbContext : DbContext
         builder.Entity<Expert>().Property(p => p.Phone).IsRequired().HasMaxLength(15);
         builder.Entity<Expert>().Property(p => p.BirthdayDate).IsRequired().HasMaxLength(10);
         builder.Entity<Expert>().Property(p => p.Money).IsRequired().HasMaxLength(13);
-        builder.Entity<Expert>().Property( p => p.Rating).IsRequired().HasMaxLength(5);
+        builder.Entity<Expert>().Property(p => p.Rating).IsRequired().HasMaxLength(5);
         builder.Entity<Expert>().Property(p => p.Avatar).IsRequired().HasMaxLength(100);
         builder.Entity<Expert>().Property(p => p.Role).IsRequired().HasMaxLength(10);
         // Relationships
@@ -77,6 +77,7 @@ public class AppDbContext : DbContext
         builder.Entity<Contract>().HasKey(p => p.Id);
         builder.Entity<Contract>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Contract>().Property(p => p.Price).IsRequired().HasMaxLength(10);
+        builder.Entity<Contract>().Property(p => p.Date).IsRequired().HasMaxLength(10);
 
 
 

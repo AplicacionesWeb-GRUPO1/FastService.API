@@ -4,15 +4,10 @@ namespace FastService.API.FastService.Resources;
 
 public class SaveContractResource
 {
-    [Required]
-    public int PublicationId { get; set; }
-    
-    [Required]
-    public int ExpertId { get; set; }
-    
-    [Required]
-    public decimal Price { get; set; }
 
-    [Required] //state
+    public int PublicationId { get; set; }
+    public int ExpertId { get; set; }
+    public decimal Price { get; set; }
     public string State { get; set; }
+    public string Date { get; set; }
 }

@@ -14,6 +14,7 @@ public class ContractRepository : BaseRepository, IContractRepository
     public async Task<IEnumerable<Contract>> ListAsync()
     {
         return await _context.Contracts
+            .Include(p => p.Publication.Client)
             .Include(p => p.Expert)
             .ToListAsync();
     }
@@ -27,6 +28,7 @@ public class ContractRepository : BaseRepository, IContractRepository
     {
         return await _context.Contracts
             .Include(p => p.Expert)
+            .Include(p => p.Publication.Client)
             .FirstOrDefaultAsync(p => p.Id == contractId);
     }
 
@@ -34,6 +36,7 @@ public class ContractRepository : BaseRepository, IContractRepository
     {
         return await _context.Contracts
             .Include(p => p.Expert)
+            .Include(p => p.Publication)
             .FirstOrDefaultAsync(p => p.PublicationId == publicationId);
     }
 
@@ -42,6 +45,7 @@ public class ContractRepository : BaseRepository, IContractRepository
         return await _context.Contracts
             .Where(p => p.ExpertId == expertId)
             .Include(p => p.Expert)
+            .Include(p => p.Publication)
             .ToListAsync();
     }
 

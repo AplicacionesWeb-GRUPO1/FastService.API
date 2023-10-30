@@ -12,11 +12,11 @@ public class GalleryService : IGalleryService
 
     private readonly IUnitOfWork _unitOfWork;
 
-    public GalleryService(IGalleryRepository GalleryRepository, IUnitOfWork unitOfWork, IClientRepository clientRepository)
+    public GalleryService(IGalleryRepository GalleryRepository, IUnitOfWork unitOfWork, IExpertRepository expertRepository)
     {
         _galleryRepository = GalleryRepository;
         _unitOfWork = unitOfWork;
-        _expertRepository = clientRepository;
+        _expertRepository = expertRepository;
     }
 
     public async Task<IEnumerable<Gallery>> ListAsync()
@@ -71,23 +71,14 @@ public class GalleryService : IGalleryService
 
         // Validate ClientId
 
-        var existingClient = await _expertRepository.FindByIdAsync(Gallery.ClientId);
+        var existingExpert = await _expertRepository.FindByIdAsync(Gallery.ExpertId);
 
-        if (existingClient == null)
-            return new GalleryResponse("Invalid Client");
+        if (existingExpert == null)
+            return new GalleryResponse("Invalid Expert");
         
-        // Validate Title
-
-        var existingGalleryWithTitle = await _galleryRepository.FindByTitleAsync(Gallery.Title);
-
-        if (existingGalleryWithTitle != null && existingGalleryWithTitle.Id != existingGallery.Id)
-            return new GalleryResponse("Gallery title already exists.");
-
         // Modify Fields
-        existingGallery.Address = Gallery.Address;
-        existingGallery.Title = Gallery.Title;
-        existingGallery.Description = Gallery.Description;
-        existingGallery.IsPublished = Gallery.IsPublished;
+        existingGallery.ImgUrl = Gallery.ImgUrl;
+        existingGallery.ExpertId = Gallery.ExpertId;
 
         try
         {

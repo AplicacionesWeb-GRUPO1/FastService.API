@@ -11,7 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7010f8af-6284-481d-975b-a9dcdc620de3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/Security/Domain/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,8 @@
       <workItem from="1698280012863" duration="350000" />
       <workItem from="1698280377301" duration="7233000" />
       <workItem from="1698816511431" duration="60000" />
-      <workItem from="1698816587131" duration="1458000" />
+      <workItem from="1698816587131" duration="2710000" />
+      <workItem from="1698856078021" duration="2130000" />
     </task>
     <servers />
   </component>

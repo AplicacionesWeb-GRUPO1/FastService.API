@@ -30,6 +30,16 @@ public class ExpertsController : ControllerBase
         return resources;
     }
 
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var expert = await _expertService.GetByIdAsync(id);
+        var result = _mapper.Map<Expert, ExpertResource>(expert.Resource);
+        return Ok(result);
+
+    }
+
+
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SaveExpertResource resource)
     {

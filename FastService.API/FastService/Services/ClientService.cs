@@ -20,6 +20,14 @@ public class ClientService : IClientService
     {
         return await _clientRepository.ListAsync();
     }
+    public async Task<ClientResponse> GetByIdAsync(int id)
+    {
+        var existingClient = await _clientRepository.FindByIdAsync(id);
+
+        if (existingClient == null)
+            return new ClientResponse("Client not found.");
+        return new ClientResponse(existingClient);
+    }
 
     public async Task<ClientResponse> SaveAsync(Client client)
     {

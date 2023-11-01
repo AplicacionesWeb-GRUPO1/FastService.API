@@ -10,11 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7010f8af-6284-481d-975b-a9dcdc620de3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Controllers/PublicationsController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ClientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ClientsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ExpertsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ExpertsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IClientService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IExpertService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IExpertService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Services/ClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Services/ClientService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Services/ExpertService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Services/ExpertService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/services",
+    "git-widget-placeholder": "develop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

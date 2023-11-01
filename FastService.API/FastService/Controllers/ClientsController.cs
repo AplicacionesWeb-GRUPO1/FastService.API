@@ -30,6 +30,15 @@ public class ClientsController : ControllerBase
         return resources;
     }
 
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var client = await _clientService.GetByIdAsync(id);
+        var result = _mapper.Map<Client, ClientResource>(client.Resource);
+        return Ok(result);
+
+    }
+
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SaveClientResource resource)
     {

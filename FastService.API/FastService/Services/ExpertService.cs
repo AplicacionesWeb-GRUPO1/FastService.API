@@ -21,6 +21,15 @@ public class ExpertService : IExpertService
         return await _expertRepository.ListAsync();
     }
 
+    public async Task<ExpertResponse> GetByIdAsync(int id)
+    {
+        var existingExpert = await _expertRepository.FindByIdAsync(id);
+
+        if (existingExpert == null)
+            return new ExpertResponse("Expert not found.");
+        return new ExpertResponse(existingExpert);
+    }
+
     public async Task<ExpertResponse> SaveAsync(Expert expert)
     {
         try

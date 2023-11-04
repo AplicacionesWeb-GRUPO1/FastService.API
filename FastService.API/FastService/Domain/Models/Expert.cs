@@ -14,6 +14,6 @@ public class Expert
     public string Role { get; set; }
     // Relationships
     public List<Contract> Contracts { get; set; } = new List<Contract>();
-    //public List<Specialty> Specialties { get; set; } = new List<Specialty>();
+    public List<Gallery> Galleries { get; set; } = new List<Gallery>();
 
 }

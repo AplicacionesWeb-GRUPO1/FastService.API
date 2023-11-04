@@ -13,6 +13,8 @@ public class AppDbContext : DbContext
     public DbSet<Expert> Experts { get; set; }
     public DbSet<Contract> Contracts { get; set; }
 
+    public DbSet<Gallery> Galleries { get; set; }
+
     public AppDbContext(DbContextOptions options) : base(options)
     {
     }
@@ -80,6 +82,18 @@ public class AppDbContext : DbContext
         builder.Entity<Contract>().Property(p => p.Date).IsRequired().HasMaxLength(10);
 
 
+        //Relationships
+        builder.Entity <Expert>()
+            .HasMany(p => p.Galleries)
+            .WithOne(p => p.Expert)
+            .HasForeignKey(p => p.ExpertId);
+
+
+
+        builder.Entity<Gallery>().ToTable("Galleries");
+        builder.Entity<Gallery>().HasKey(p => p.Id);
+        builder.Entity<Gallery>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Gallery>().Property(p => p.ImgUrl).IsRequired().HasMaxLength(200);
 
 
         // Apply Snake Case Naming Convention

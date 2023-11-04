@@ -13,5 +13,7 @@ public class ResourceToModelProfile : Profile
 
         CreateMap<SaveExpertResource, Expert>();
         CreateMap<SaveContractResource, Contract>();
+
+        CreateMap<SaveGalleryResource, Gallery>();
     }
 }

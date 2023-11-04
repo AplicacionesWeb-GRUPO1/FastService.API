@@ -11,6 +11,8 @@ public class Expert
     public decimal Money { get; set; }
     public decimal Rating { get; set; }
     public string Avatar { get; set; }
+    // especialidad
+    public string specialty { get; set; }
     public string Role { get; set; }
     // Relationships
     public List<Contract> Contracts { get; set; } = new List<Contract>();

@@ -10,5 +10,6 @@ public class ExpertResource
     public decimal Money { get; set; }
     public decimal Rating { get; set; }
     public string Avatar { get; set; }
+    public string specialty { get; set; }
     public string Role { get; set; }
 }

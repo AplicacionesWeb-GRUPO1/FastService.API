@@ -40,6 +40,8 @@ builder.Services.AddScoped<IExpertService, ExpertService>();
 builder.Services.AddScoped<IContractRepository, ContractRepository>();
 builder.Services.AddScoped<IContractService, ContractService>();
 
+builder.Services.AddScoped<IGalleryRepository, GalleryRepository>();
+builder.Services.AddScoped<IGalleryService, GalleryService>();
 
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();

@@ -10,12 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7010f8af-6284-481d-975b-a9dcdc620de3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ClientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ClientsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ExpertsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ExpertsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IClientService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IExpertService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IExpertService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Services/ClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Services/ClientService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Services/ExpertService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Services/ExpertService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +25,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2XEJSz1bV8toAvrA6GiwEJXVuSv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,23 +37,24 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "configurable.group.appearance",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\USER\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\USER\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\USER\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\Fiorella\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Fiorella\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\Fiorella\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.FastService.API: http">
+  <component name="RunManager" selected=".NET Launch Settings Profile.FastService.API: https">
     <configuration name="FastService.API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/FastService.API/FastService.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net7.0" />
@@ -116,6 +115,8 @@
       <workItem from="1698278418496" duration="1552000" />
       <workItem from="1698280012863" duration="350000" />
       <workItem from="1698280377301" duration="7233000" />
+      <workItem from="1700524410283" duration="6425000" />
+      <workItem from="1700690746825" duration="4394000" />
     </task>
     <servers />
   </component>

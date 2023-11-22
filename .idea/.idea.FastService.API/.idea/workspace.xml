@@ -10,12 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7010f8af-6284-481d-975b-a9dcdc620de3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ClientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ClientsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ExpertsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ExpertsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IClientService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IExpertService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IExpertService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Services/ClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Services/ClientService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Services/ExpertService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Services/ExpertService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Controllers/UsersController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Domain/Models/User.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Domain/Repositories/IUserRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Domain/Repositories/IUserService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Domain/Services/Communication/AuthenticateRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Domain/Services/Communication/AuthenticateResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Domain/Services/Communication/RegisterRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Domain/Services/Communication/UpdateRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Exceptions/AppException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Mapping/ModelToResourceProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Mapping/ResourceToModelProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Persistence/Repositories/UserRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Resources/UserResource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Services/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/FastService.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,32 +43,35 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2XEJSz1bV8toAvrA6GiwEJXVuSv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\USER\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\USER\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\USER\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Fiorella\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Fiorella\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Fiorella\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.FastService.API: http">
+}</component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.FastService.API: https">
     <configuration name="FastService.API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/FastService.API/FastService.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net7.0" />
@@ -116,6 +132,8 @@
       <workItem from="1698278418496" duration="1552000" />
       <workItem from="1698280012863" duration="350000" />
       <workItem from="1698280377301" duration="7233000" />
+      <workItem from="1700524410283" duration="6425000" />
+      <workItem from="1700690746825" duration="3382000" />
     </task>
     <servers />
   </component>

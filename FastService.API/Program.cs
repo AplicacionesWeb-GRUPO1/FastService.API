@@ -2,6 +2,9 @@ using FastService.API.FastService.Domain.Repositories;
 using FastService.API.FastService.Domain.Services;
 using FastService.API.FastService.Mapping;
 using FastService.API.FastService.Services;
+using FastService.API.Security.Domain.Repositories;
+using FastService.API.Security.Persistence.Repositories;
+using FastService.API.Security.Services;
 using FastService.API.Shared.Persistence.Contexts;
 using FastService.API.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -43,14 +46,20 @@ builder.Services.AddScoped<IContractService, ContractService>();
 builder.Services.AddScoped<IGalleryRepository, GalleryRepository>();
 builder.Services.AddScoped<IGalleryService, GalleryService>();
 
-
+// Shared Injection Configuration
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 // AutoMapper Configuration
 
 builder.Services.AddAutoMapper(
     typeof(ModelToResourceProfile),
-    typeof(ResourceToModelProfile));
+    typeof(ResourceToModelProfile),
+    typeof(FastService.API.Security.Mapping.ModelToResourceProfile),
+    typeof(FastService.API.Security.Mapping.ResourceToModelProfile)
+    );
 
 var app = builder.Build();
 

@@ -72,6 +72,8 @@ public class AppDbContext : DbContext
         builder.Entity<Expert>().Property(p => p.Rating).IsRequired().HasMaxLength(5);
         builder.Entity<Expert>().Property(p => p.Avatar).IsRequired().HasMaxLength(100);
         builder.Entity<Expert>().Property(p => p.Role).IsRequired().HasMaxLength(10);
+        builder.Entity<Expert>().Property(p => p.specialty).IsRequired().HasMaxLength(50);
+
         // Relationships
         builder.Entity<Expert>()
             .HasMany(p => p.Contracts)

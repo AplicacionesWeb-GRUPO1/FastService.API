@@ -10,10 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7010f8af-6284-481d-975b-a9dcdc620de3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FastService.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Authorization/Handlers/Implementations/JwtHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Handlers/Implementations/JwtHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Authorization/Middleware/JwtMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Middleware/JwtMiddleware.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +122,7 @@
       <workItem from="1700524410283" duration="6425000" />
       <workItem from="1700690746825" duration="4394000" />
       <workItem from="1700760813631" duration="4648000" />
-      <workItem from="1700778070446" duration="1056000" />
+      <workItem from="1700778070446" duration="1355000" />
     </task>
     <servers />
   </component>

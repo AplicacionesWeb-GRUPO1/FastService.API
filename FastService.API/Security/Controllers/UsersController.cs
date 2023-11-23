@@ -3,7 +3,7 @@ using FastService.API.Security.Domain.Models;
 using FastService.API.Security.Domain.Repositories;
 using FastService.API.Security.Domain.Services.Communication;
 using FastService.API.Security.Resources;
-using Microsoft.AspNetCore.Authorization;
+using FastService.API.Security.Authorization.Attributes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FastService.API.Security.Controllers;

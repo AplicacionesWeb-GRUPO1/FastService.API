@@ -10,7 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7010f8af-6284-481d-975b-a9dcdc620de3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Attributes/AllowAnonymousAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Attributes/AuthorizeAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Handlers/Implementations/JwtHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Handlers/Interfaces/IJwtHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Middleware/ErrorHandlerMiddleware.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Middleware/JwtMiddleware.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Settings/AppSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/FastService.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Controllers/UsersController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Models/User.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Repositories/IUserRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Repositories/IUserService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Services/Communication/AuthenticateRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Services/Communication/AuthenticateResponse.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Services/Communication/RegisterRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Services/Communication/UpdateRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Exceptions/AppException.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Mapping/ModelToResourceProfile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Mapping/ResourceToModelProfile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Persistence/Repositories/UserRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Resources/UserResource.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Services/UserService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
@@ -37,7 +62,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Api-Security",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,9 +73,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Fiorella\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Fiorella\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\Fiorella\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\Nadia\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Nadia\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\Nadia\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -117,11 +142,24 @@
       <workItem from="1698280377301" duration="7233000" />
       <workItem from="1700524410283" duration="6425000" />
       <workItem from="1700690746825" duration="4394000" />
+      <workItem from="1700760813631" duration="307000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

@@ -1,5 +1,6 @@
 using AutoMapper;
 using FastService.API.FastService.Domain.Repositories;
+using FastService.API.Security.Authorization.Handlers.Interfaces;
 using FastService.API.Security.Domain.Models;
 using FastService.API.Security.Domain.Repositories;
 using FastService.API.Security.Domain.Services.Communication;
@@ -13,17 +14,14 @@ public class UserService : IUserService
     private readonly IUserRepository _userRepository;
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
+    private readonly IJwtHandler _jwtHandler;
 
-    public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork, IMapper mapper)
+    public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork, IJwtHandler jwtHandler, IMapper mapper)
     {
         _userRepository = userRepository;
         _unitOfWork = unitOfWork;
+        _jwtHandler = jwtHandler;
         _mapper = mapper;
-    }
-
-    public Task<AuthenticateResponse> Authenticate(AuthenticateRequest model)
-    {
-        throw new NotImplementedException();
     }
 
     public async Task<IEnumerable<User>> ListAsync()
@@ -102,4 +100,29 @@ public class UserService : IUserService
             throw new AppException($"An error occurred while deleting the user: {e.Message}");
         }
     }
+    
+    public async Task<AuthenticateResponse> Authenticate(AuthenticateRequest request)
+    {
+        var user = await
+            _userRepository.FindByUsernameAsync(request.UserName);
+        Console.WriteLine($"Request: {request.UserName},{request.Password}");
+        Console.WriteLine($"User: {user.Id}, {user.FirstName},{user.LastName}, {user.UserName}, {user.PasswordHash}");
+
+        // validate
+        if (user == null || !BCryptNet.Verify(request.Password,
+                user.PasswordHash))
+        {
+            Console.WriteLine("Authentication Error");
+            throw new AppException("Username or password is incorrect");
+        }
+
+        Console.WriteLine("Authentication successful. About to generate token");
+        // authentication successful
+        var response = _mapper.Map<AuthenticateResponse>(user);
+        Console.WriteLine($"Response: {response.Id}, {response.FirstName},{response.LastName}, {response.UserName}");
+        response.Token = _jwtHandler.GenerateToken(user);
+        Console.WriteLine($"Generated token is {response.Token}");
+        return response;
+    }
+
 }

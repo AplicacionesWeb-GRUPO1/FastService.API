@@ -90,9 +90,7 @@ public class AppDbContext : DbContext
             .HasMany(p => p.Galleries)
             .WithOne(p => p.Expert)
             .HasForeignKey(p => p.ExpertId);
-
-
-
+        
         builder.Entity<Gallery>().ToTable("Galleries");
         builder.Entity<Gallery>().HasKey(p => p.Id);
         builder.Entity<Gallery>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();

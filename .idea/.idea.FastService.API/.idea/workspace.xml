@@ -10,31 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7010f8af-6284-481d-975b-a9dcdc620de3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Attributes/AllowAnonymousAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Attributes/AuthorizeAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Handlers/Implementations/JwtHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Handlers/Interfaces/IJwtHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Middleware/ErrorHandlerMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Middleware/JwtMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Settings/AppSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Controllers/UsersController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Models/User.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Repositories/IUserRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Repositories/IUserService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Services/Communication/AuthenticateRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Services/Communication/AuthenticateResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Services/Communication/RegisterRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Domain/Services/Communication/UpdateRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Exceptions/AppException.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Mapping/ModelToResourceProfile.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Mapping/ResourceToModelProfile.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Persistence/Repositories/UserRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Resources/UserResource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Services/UserService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Authorization/Handlers/Implementations/JwtHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Handlers/Implementations/JwtHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FastService.API/Security/Authorization/Middleware/JwtMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/Security/Authorization/Middleware/JwtMiddleware.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/21ff858feb4274da1e1bf4dc28758769cd908e3596ad12f4bcd058cb5997b1df/ActionContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -57,28 +39,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Api-Security",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Api-Security&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ReSpellerSettingsId&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Nadia\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Nadia\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\Nadia\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Nadia\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Nadia\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Nadia\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.FastService.API: https">
     <configuration name="FastService.API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/FastService.API/FastService.API.csproj" />
@@ -142,7 +124,8 @@
       <workItem from="1698280377301" duration="7233000" />
       <workItem from="1700524410283" duration="6425000" />
       <workItem from="1700690746825" duration="4394000" />
-      <workItem from="1700760813631" duration="307000" />
+      <workItem from="1700760813631" duration="4648000" />
+      <workItem from="1700778070446" duration="1056000" />
     </task>
     <servers />
   </component>
@@ -150,6 +133,11 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="dotnet:Microsoft.EntityFrameworkCore.Abstractions" />
+    <option featureType="dependencySupport" implementationName="dotnet:Microsoft.EntityFrameworkCore.Relational" />
+    <option featureType="dependencySupport" implementationName="dotnet:Microsoft.EntityFrameworkCore" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>

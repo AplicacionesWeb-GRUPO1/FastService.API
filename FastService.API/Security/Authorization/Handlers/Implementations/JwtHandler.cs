@@ -9,11 +9,11 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace FastService.API.Security.Authorization.Handlers.Implementations;
 
-public class JwtHandlerr: IJwtHandler
+public class JwtHandler: IJwtHandler
 {
     private readonly AppSettings _appSettings;
     
-    public JwtHandlerr(IOptions<AppSettings> appSettings)
+    public JwtHandler(IOptions<AppSettings> appSettings)
     {
         _appSettings = appSettings.Value;
     }

@@ -100,7 +100,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IJwtHandler, JwtHandlerr>();
+builder.Services.AddScoped<IJwtHandler, JwtHandler>();
 
 // Security Injection Configuration
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -150,4 +150,3 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
-

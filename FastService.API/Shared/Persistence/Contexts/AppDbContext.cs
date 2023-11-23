@@ -1,5 +1,6 @@
 using FastService.API.Shared.Extensions;
 using FastService.API.FastService.Domain.Models;
+using FastService.API.Security.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace FastService.API.Shared.Persistence.Contexts;
@@ -14,6 +15,8 @@ public class AppDbContext : DbContext
     public DbSet<Contract> Contracts { get; set; }
 
     public DbSet<Gallery> Galleries { get; set; }
+    
+    public DbSet<User> Users { get; set; }
 
     public AppDbContext(DbContextOptions options) : base(options)
     {
@@ -89,14 +92,24 @@ public class AppDbContext : DbContext
             .HasMany(p => p.Galleries)
             .WithOne(p => p.Expert)
             .HasForeignKey(p => p.ExpertId);
-
-
-
+        
         builder.Entity<Gallery>().ToTable("Galleries");
         builder.Entity<Gallery>().HasKey(p => p.Id);
         builder.Entity<Gallery>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Gallery>().Property(p => p.ImgUrl).IsRequired().HasMaxLength(200);
-
+          
+        //Users
+        builder.Entity<User>().ToTable("Users");
+        builder.Entity<User>().HasKey(p => p.Id);
+        builder.Entity<User>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<User>().Property(p => p.UserName).IsRequired().HasMaxLength(30);
+        builder.Entity<User>().Property(p => p.FirstName).IsRequired();
+        builder.Entity<User>().Property(p => p.LastName).IsRequired();
+        builder.Entity<User>().Property(p => p.Email).IsRequired();
+        builder.Entity<User>().Property(p => p.Avatar).IsRequired();
+        builder.Entity<User>().Property(p => p.Role).IsRequired();
+        builder.Entity<User>().Property(p => p.Phone).IsRequired();
+        builder.Entity<User>().Property(p => p.BirthdayDate).IsRequired();
 
         // Apply Snake Case Naming Convention
 

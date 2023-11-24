@@ -7,7 +7,9 @@ public interface IClientService
 {
     Task<IEnumerable<Client>> ListAsync();
     Task<ClientResponse> GetByIdAsync(int id);
+    Task<ClientResponse> GetByUsernameAsync(string username);
     Task<ClientResponse> SaveAsync(Client client);
     Task<ClientResponse> UpdateAsync(int id, Client client);
     Task<ClientResponse> DeleteAsync(int id);
+
 }

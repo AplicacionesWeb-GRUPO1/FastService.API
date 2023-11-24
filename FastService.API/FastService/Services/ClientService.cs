@@ -29,6 +29,16 @@ public class ClientService : IClientService
         return new ClientResponse(existingClient);
     }
 
+    public async Task<ClientResponse> GetByUsernameAsync(string username)
+    {       
+        var existingClient = await _clientRepository.FindByUsernameAsync(username);
+        
+        if (existingClient == null)
+            return new ClientResponse("Client not found.");
+        return new ClientResponse(existingClient);
+    }
+
+
     public async Task<ClientResponse> SaveAsync(Client client)
     {
         try

@@ -40,6 +40,15 @@ public class ClientsController : ControllerBase
 
     }
 
+    [HttpGet("GetByUsername/{username}")]
+    public async Task<IActionResult> GetByUsername(string username)
+    {
+        var client = await _clientService.GetByUsernameAsync(username);
+        var result = _mapper.Map<Client, ClientResource>(client.Resource);
+        return Ok(result);
+
+    }
+    
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SaveClientResource resource)
     {

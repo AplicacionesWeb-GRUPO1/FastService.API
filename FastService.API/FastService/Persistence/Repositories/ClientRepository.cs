@@ -26,6 +26,13 @@ public class ClientRepository : BaseRepository, IClientRepository
         return await _context.Clients.FindAsync(id);
     }
 
+    
+    public async Task<Client> FindByUsernameAsync(string username)
+    {
+        return await _context.Clients.FirstOrDefaultAsync(client => client.UserName == username);
+    }
+
+
     public void Update(Client category)
     {
         _context.Clients.Update(category);

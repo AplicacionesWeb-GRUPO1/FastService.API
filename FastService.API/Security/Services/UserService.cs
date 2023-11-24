@@ -12,6 +12,8 @@ namespace FastService.API.Security.Services;
 public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
+    private readonly IClientRepository _clientRepository;
+
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
     private readonly IJwtHandler _jwtHandler;
@@ -39,6 +41,9 @@ public class UserService : IUserService
     public async Task RegisterAsync(RegisterRequest request)
     {
         // validate
+        if (_userRepository.ExistsByUsername(request.Role))
+
+
         if (_userRepository.ExistsByUsername(request.UserName))
             throw new AppException("Username '" + request.UserName + "' is already taken");
         // map model to new user object
@@ -106,7 +111,7 @@ public class UserService : IUserService
         var user = await
             _userRepository.FindByUsernameAsync(request.UserName);
         Console.WriteLine($"Request: {request.UserName},{request.Password}");
-        Console.WriteLine($"User: {user.Id}, {user.FirstName},{user.LastName}, {user.UserName}, {user.PasswordHash}");
+        Console.WriteLine($"User: {user.Id}, {user.UserName}, {user.UserName}, {user.PasswordHash}");
 
         // validate
         if (user == null || !BCryptNet.Verify(request.Password,
@@ -119,7 +124,7 @@ public class UserService : IUserService
         Console.WriteLine("Authentication successful. About to generate token");
         // authentication successful
         var response = _mapper.Map<AuthenticateResponse>(user);
-        Console.WriteLine($"Response: {response.Id}, {response.FirstName},{response.LastName}, {response.UserName}");
+        Console.WriteLine($"Response: {response.UserName}");
         response.Token = _jwtHandler.GenerateToken(user);
         Console.WriteLine($"Generated token is {response.Token}");
         return response;

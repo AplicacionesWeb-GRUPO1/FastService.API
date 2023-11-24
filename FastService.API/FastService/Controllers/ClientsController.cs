@@ -4,6 +4,7 @@ using FastService.API.FastService.Domain.Services;
 using FastService.API.FastService.Resources;
 using FastService.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using Org.BouncyCastle.Asn1.Ocsp;
 
 namespace FastService.API.FastService.Controllers;
 
@@ -46,9 +47,9 @@ public class ClientsController : ControllerBase
             return BadRequest(ModelState.GetErrorMessages());
 
         var client = _mapper.Map<SaveClientResource, Client>(resource);
-
+        
         var result = await _clientService.SaveAsync(client);
-
+        
         if (!result.Success)
             return BadRequest(result.Message);
 

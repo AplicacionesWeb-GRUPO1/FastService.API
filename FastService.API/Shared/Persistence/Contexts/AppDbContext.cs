@@ -31,6 +31,7 @@ public class AppDbContext : DbContext
         builder.Entity<Client>().HasKey(p => p.Id);
         builder.Entity<Client>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Client>().Property(p => p.Name).IsRequired().HasMaxLength(30);
+        builder.Entity<Client>().Property(p => p.UserName).IsRequired().HasMaxLength(30);
         builder.Entity<Client>().Property(p => p.LastName).IsRequired().HasMaxLength(30);
         builder.Entity<Client>().Property(p => p.Phone).IsRequired().HasMaxLength(15);
         builder.Entity<Client>().Property(p => p.BirthdayDate).IsRequired().HasMaxLength(10);
@@ -65,6 +66,7 @@ public class AppDbContext : DbContext
         builder.Entity<Expert>().HasKey(p => p.Id);
         builder.Entity<Expert>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Expert>().Property(p => p.Name).IsRequired().HasMaxLength(30);
+        builder.Entity<Expert>().Property(p => p.UserName).IsRequired().HasMaxLength(30);
         builder.Entity<Expert>().Property(p => p.LastName).IsRequired().HasMaxLength(50);
         builder.Entity<Expert>().Property(p => p.Phone).IsRequired().HasMaxLength(15);
         builder.Entity<Expert>().Property(p => p.BirthdayDate).IsRequired().HasMaxLength(10);
@@ -103,13 +105,7 @@ public class AppDbContext : DbContext
         builder.Entity<User>().HasKey(p => p.Id);
         builder.Entity<User>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<User>().Property(p => p.UserName).IsRequired().HasMaxLength(30);
-        builder.Entity<User>().Property(p => p.FirstName).IsRequired();
-        builder.Entity<User>().Property(p => p.LastName).IsRequired();
-        builder.Entity<User>().Property(p => p.Email).IsRequired();
-        builder.Entity<User>().Property(p => p.Avatar).IsRequired();
         builder.Entity<User>().Property(p => p.Role).IsRequired();
-        builder.Entity<User>().Property(p => p.Phone).IsRequired();
-        builder.Entity<User>().Property(p => p.BirthdayDate).IsRequired();
 
         // Apply Snake Case Naming Convention
 

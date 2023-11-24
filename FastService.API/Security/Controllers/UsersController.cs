@@ -45,11 +45,13 @@ public class UsersController : ControllerBase
     {
         await _userService.RegisterAsync(request);
 
-        if (request.Role == "client"){
+        if (request.Role == "client")
+        {
             var newClient = new Client
             {
                 Name = request.UserName,
-                LastName = request.UserName,
+                UserName = request.UserName,
+                LastName = request.LastName,
                 Phone = request.Phone,
                 BirthdayDate = request.BirthdayDate,
                 Money = 300,
@@ -64,7 +66,8 @@ public class UsersController : ControllerBase
         var newExpert = new Expert
         {
             Name = request.UserName,
-            LastName = request.UserName,
+            UserName = request.UserName,
+            LastName = request.LastName,
             Phone = request.Phone,
             BirthdayDate = request.BirthdayDate,
             Money = 300,
@@ -72,7 +75,7 @@ public class UsersController : ControllerBase
             specialty = "jardinero",
             Avatar = "https://picsum.photos/200/300",
             Role = request.Role,
-        }; 
+        };
         var resultExper = await _expertService.SaveAsync(newExpert);
         return Ok(new { message = resultExper });
 

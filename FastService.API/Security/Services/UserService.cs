@@ -13,6 +13,8 @@ public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
     private readonly IClientRepository _clientRepository;
+    private readonly IExpertRepository _expertRepository;
+
 
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;

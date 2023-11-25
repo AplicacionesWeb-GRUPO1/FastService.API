@@ -5,7 +5,7 @@ using FastService.API.Security.Domain.Services.Communication;
 using FastService.API.Security.Resources;
 using FastService.API.Security.Authorization.Attributes;
 using FastService.API.FastService.Domain.Models;
-
+using FastService.API.Shared.Extensions;
 
 using Microsoft.AspNetCore.Mvc;
 using Org.BouncyCastle.Asn1.Cmp;
@@ -54,7 +54,7 @@ public class UsersController : ControllerBase
                     LastName = request.LastName,
                     Phone = request.Phone,
                     BirthdayDate = request.BirthdayDate,
-                    Money = 300,
+                    Money = CustomRandom.GetRandomValueBetween500And1000(),
                     Avatar = "https://picsum.photos/200/300",
                     Role = request.Role,
                 };
@@ -70,9 +70,9 @@ public class UsersController : ControllerBase
                 LastName = request.LastName,
                 Phone = request.Phone,
                 BirthdayDate = request.BirthdayDate,
-                Money = 300,
-                Rating = 5,
-                specialty = "jardinero",
+                Money = CustomRandom.GetRandomValueBetween500And1000(),
+                Rating = CustomRandom.GetRandomNumberBetween1And5(),
+                specialty = CustomRandom.GetRandomEspecialidad(),
                 Avatar = "https://picsum.photos/200/300",
                 Role = request.Role,
             };

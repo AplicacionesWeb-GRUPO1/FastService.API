@@ -1,10 +1,13 @@
 using AutoMapper;
 using FastService.API.FastService.Domain.Models;
 using FastService.API.FastService.Domain.Services;
+using FastService.API.FastService.Domain.Services.Communication;
 using FastService.API.FastService.Resources;
 using FastService.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Org.BouncyCastle.Asn1.Ocsp;
+using Xunit;
+using Moq;
 
 namespace FastService.API.FastService.Controllers;
 
@@ -46,7 +49,6 @@ public class ClientsController : ControllerBase
         var client = await _clientService.GetByUsernameAsync(username);
         var result = _mapper.Map<Client, ClientResource>(client.Resource);
         return Ok(result);
-
     }
     
     [HttpPost]
@@ -97,4 +99,39 @@ public class ClientsController : ControllerBase
         return Ok(clientResource);
     }
     
+}
+public class ClientsControllerTests
+{
+    private readonly Mock<IClientService> _mockClientService;
+    private readonly Mock<IMapper> _mockMapper;
+    private readonly ClientsController _controller;
+
+    public ClientsControllerTests()
+    {
+        _mockClientService = new Mock<IClientService>();
+        _mockMapper = new Mock<IMapper>();
+        _controller = new ClientsController(_mockClientService.Object, _mockMapper.Object);
+    }
+    [Fact]
+    public async Task GetByUsername_ValidUsername_ReturnsOkObjectResult()
+    {
+        // Arrange
+        var username = "testuser";
+        var client = new Client(); // Simular un objeto Client
+        var clientResource = new ClientResource(); // Simular un objeto ClientResource
+
+        _mockClientService.Setup(x => x.GetByUsernameAsync(username))
+            .ReturnsAsync(new ClientResponse(client));
+
+        _mockMapper.Setup(x => x.Map<Client, ClientResource>(client))
+            .Returns(clientResource);
+
+        // Act
+        var result = await _controller.GetByUsername(username);
+
+        // Assert
+        Assert.IsType<OkObjectResult>(result);
+        var okResult = result as OkObjectResult;
+        Assert.Equal(clientResource, okResult.Value);
+    }
 }

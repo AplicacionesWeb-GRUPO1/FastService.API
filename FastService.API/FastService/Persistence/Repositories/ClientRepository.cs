@@ -27,7 +27,7 @@ public class ClientRepository : BaseRepository, IClientRepository
     }
 
     
-    public async Task<Client> FindByUsernameAsync(string username)
+    public async Task<Client> FindByUserNameAsync(string username)
     {
         return await _context.Clients.FirstOrDefaultAsync(client => client.UserName == username);
     }

@@ -26,6 +26,10 @@ public class ExpertRepository : BaseRepository, IExpertRepository
         return await _context.Experts.FindAsync(id);
     }
 
+    public async Task<Expert> FindByUserNameAsync(string name) { 
+        return await _context.Experts.FirstAsync(x => x.UserName == name);
+    }
+
     public void Update(Expert expert)
     {
         _context.Experts.Update(expert);

@@ -2,6 +2,7 @@ using AutoMapper;
 using FastService.API.FastService.Domain.Models;
 using FastService.API.FastService.Domain.Services;
 using FastService.API.FastService.Resources;
+using FastService.API.FastService.Services;
 using FastService.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,6 +40,14 @@ public class ExpertsController : ControllerBase
 
     }
 
+    [HttpGet("GetByUsername/{username}")]
+    public async Task<IActionResult> GetByUsername(string username)
+    {
+        var expert = await _expertService.GetByUserNameAsync(username);
+        var result = _mapper.Map<Expert, ExpertResource>(expert.Resource);
+        return Ok(result);
+
+    }
 
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SaveExpertResource resource)

@@ -30,6 +30,13 @@ public class ExpertService : IExpertService
         return new ExpertResponse(existingExpert);
     }
 
+    public async Task<ExpertResponse> GetByUserNameAsync(string userName) {
+        var existingExpert = await _expertRepository.FindByUserNameAsync(userName);
+        if (existingExpert == null)
+            return new ExpertResponse("Expert not found.");
+        return new ExpertResponse(existingExpert);
+    }
+
     public async Task<ExpertResponse> SaveAsync(Expert expert)
     {
         try

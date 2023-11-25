@@ -43,7 +43,9 @@ public class UserService : IUserService
     public async Task RegisterAsync(RegisterRequest request)
     {
         // validate
-        if (_userRepository.ExistsByUsername(request.Role))
+        if (_userRepository.ExistsByUsername(request.UserName)) {
+            throw new InvalidDataException($"UserName no valid:");
+        }
 
 
         if (_userRepository.ExistsByUsername(request.UserName))

@@ -43,11 +43,27 @@ public class UsersController : ControllerBase
     [HttpPost("sign-up")]
     public async Task<IActionResult> Register(RegisterRequest request)
     {
-        await _userService.RegisterAsync(request);
+        try {
+            await _userService.RegisterAsync(request);
+            if (request.Role == "client")
+            {
+                var newClient = new Client
+                {
+                    Name = request.UserName,
+                    UserName = request.UserName,
+                    LastName = request.LastName,
+                    Phone = request.Phone,
+                    BirthdayDate = request.BirthdayDate,
+                    Money = 300,
+                    Avatar = "https://picsum.photos/200/300",
+                    Role = request.Role,
+                };
 
-        if (request.Role == "client")
-        {
-            var newClient = new Client
+                var result = await _clientService.SaveAsync(newClient);
+                return Ok(new { message = result });
+            }
+            ////else if (request.Role == "client") {}
+            var newExpert = new Expert
             {
                 Name = request.UserName,
                 UserName = request.UserName,
@@ -55,29 +71,18 @@ public class UsersController : ControllerBase
                 Phone = request.Phone,
                 BirthdayDate = request.BirthdayDate,
                 Money = 300,
+                Rating = 5,
+                specialty = "jardinero",
                 Avatar = "https://picsum.photos/200/300",
                 Role = request.Role,
             };
+            var resultExper = await _expertService.SaveAsync(newExpert);
 
-            var result = await _clientService.SaveAsync(newClient);
-            return Ok(new { message = result });
+            return Ok(new { message = resultExper });
         }
-        ////else if (request.Role == "client") {}
-        var newExpert = new Expert
-        {
-            Name = request.UserName,
-            UserName = request.UserName,
-            LastName = request.LastName,
-            Phone = request.Phone,
-            BirthdayDate = request.BirthdayDate,
-            Money = 300,
-            Rating = 5,
-            specialty = "jardinero",
-            Avatar = "https://picsum.photos/200/300",
-            Role = request.Role,
-        };
-        var resultExper = await _expertService.SaveAsync(newExpert);
-        return Ok(new { message = resultExper });
+        catch {
+            return BadRequest("UserName no valid, already exist");
+        }
 
     }
     

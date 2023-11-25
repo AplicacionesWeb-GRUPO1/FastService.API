@@ -10,14 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7010f8af-6284-481d-975b-a9dcdc620de3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastService.API/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ClientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Controllers/ClientsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Domain/Repositories/IClientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Domain/Repositories/IClientRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Domain/Services/IClientService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Persistence/Repositories/ClientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Persistence/Repositories/ClientRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/FastService/Services/ClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/FastService/Services/ClientService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FastService.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FastService.API/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.google.cloudcode.ide_session_index": "20231124_0000",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feature/ClientEndpoint",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -131,7 +125,7 @@
       <workItem from="1700690746825" duration="4394000" />
       <workItem from="1700760813631" duration="4648000" />
       <workItem from="1700778070446" duration="1355000" />
-      <workItem from="1700849907514" duration="1770000" />
+      <workItem from="1700849907514" duration="4250000" />
     </task>
     <servers />
   </component>
